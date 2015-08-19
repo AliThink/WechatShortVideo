@@ -1,4 +1,8 @@
-# WechatShortVideo
+WechatShortVideo
+===============
+
+<img src="wechatshortvideo-demo.gif" width="230" height="408" />
+
 Short Video Capture like Wechat App
 ## What
 
