@@ -126,7 +126,7 @@
     self.focusView.recorder = _recorder;
     [previewView addSubview:self.focusView];
     
-    self.focusView.outsideFocusTargetImage = [UIImage imageNamed:@"scan_focus"];
+    self.focusView.outsideFocusTargetImage = [UIImage imageNamed:@"WechatShortVideo_scan_focus"];
     _recorder.initializeSessionLazily = NO;
     
     NSError *error;
@@ -370,7 +370,7 @@
     [[UIApplication sharedApplication] endIgnoringInteractionEvents];
     
     if (error == nil) {
-        self.progressHUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+        self.progressHUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WechatShortVideo_37x-Checkmark.png"]];
         self.progressHUD.mode = MBProgressHUDModeCustomView;
         [self.progressHUD hide:YES afterDelay:1];
 

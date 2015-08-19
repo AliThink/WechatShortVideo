@@ -86,7 +86,7 @@
                         <constraint firstAttribute="width" constant="45" id="EGY-VL-MTO"/>
                         <constraint firstAttribute="height" constant="45" id="ytc-Yk-j7X"/>
                     </constraints>
-                    <state key="normal" image="close.png">
+                    <state key="normal" image="WechatShortVideo_close.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
@@ -159,6 +159,6 @@
         </view>
     </objects>
     <resources>
-        <image name="close.png" width="45" height="45"/>
+        <image name="WechatShortVideo_close.png" width="45" height="45"/>
     </resources>
 </document>
