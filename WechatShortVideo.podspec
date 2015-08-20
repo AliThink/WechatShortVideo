@@ -6,7 +6,8 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "AliThink" => "cloudsthinker@126.com" }
   s.source       = { :git => "https://github.com/AliThink/WechatShortVideo.git", :tag => "v0.1.1" }
-  s.source_files  = "WechatShortVideo/**/*"
+  s.source_files  = "WechatShortVideo/**/*.{h,m}"
+  s.resources = ["WechatShortVideo/**/*.{xib}","WechatShortVideo/**/*.{png}"]
   s.platform      = :ios, '7.0'
   s.requires_arc  = true
   s.dependency "SCRecorder", "~> 2.5.0"
