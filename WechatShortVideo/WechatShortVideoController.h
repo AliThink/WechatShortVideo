@@ -31,7 +31,15 @@
 #import <UIKit/UIKit.h>
 #import "WechatShortVideoConfig.h"
 
+@protocol WechatShortVideoDelegate <NSObject>
+
+- (void)finishWechatShortVideoCapture:(NSURL *)filePath;
+
+@end
+
 @interface WechatShortVideoController : UIViewController
+
+@property(nonatomic, weak) id<WechatShortVideoDelegate> delegate;
 
 /**
  * Do something when video saved success.
