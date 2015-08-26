@@ -58,6 +58,8 @@
     SCPlayer *_player;
 }
 
+@synthesize delegate;
+
 #pragma mark - Do Next Func
 - (void)doNextWhenVideoSavedSuccess {
     //file path is VIDEO_OUTPUTFILE
@@ -377,6 +379,10 @@
         //return the filepath
         [self removePreviewMode];
         [self doNextWhenVideoSavedSuccess];
+        
+        if ([delegate respondsToSelector:@selector(finishWechatShortVideoCapture:)]) {
+            [delegate finishWechatShortVideoCapture:VIDEO_OUTPUTFILE];
+        }
     } else {
         self.progressHUD.labelText = [NSString stringWithFormat:@"Failed to save\n%@", error.localizedDescription];
         self.progressHUD.mode = MBProgressHUDModeCustomView;
