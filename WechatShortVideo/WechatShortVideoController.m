@@ -100,6 +100,7 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     [_recorder stopRunning];
 }
 
