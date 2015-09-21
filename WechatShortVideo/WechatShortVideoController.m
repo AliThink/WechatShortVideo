@@ -120,7 +120,7 @@
 - (void)configRecorder {
     _recorder = [SCRecorder recorder];
     _recorder.captureSessionPreset = [SCRecorderTools bestCaptureSessionPresetCompatibleWithAllDevices];
-    _recorder.maxRecordDuration = CMTimeMake(300, 30);
+    _recorder.maxRecordDuration = CMTimeMake(30 * VIDEO_MAX_TIME, 30);
     _recorder.delegate = self;
     _recorder.autoSetVideoOrientation = YES;
     
@@ -370,6 +370,18 @@
 - (void)recorder:(SCRecorder *)recorder didAppendVideoSampleBufferInSession:(SCRecordSession *)recordSession {
     //update progressBar
     [self refreshProgressViewLengthByTime:recordSession.duration];
+}
+
+- (void)recorder:(SCRecorder *__nonnull)recorder didCompleteSession:(SCRecordSession *__nonnull)session {
+    //confirm capture
+    [self hideMiddleTipView];
+    if (captureValidFlag) {
+        //preview and save video
+        [self cancelCaptureWithSaveFlag:YES];
+    } else {
+        [self cancelCaptureWithSaveFlag:NO];
+        [self showCaptureBtn];
+    }
 }
 
 - (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo: (void *) contextInfo {
