@@ -249,6 +249,7 @@
 
 #pragma mark - Record finish Preview and save
 - (void)configPreviewMode {
+    [self hideCaptureBtn];
     self.captureRealBtn.enabled = NO;
     
     _player = [SCPlayer player];
@@ -444,7 +445,9 @@
 }
 
 - (IBAction)captureStartTouchUpOutside:(UIButton *)captureBtn {
-    [self showCaptureBtn];
+    if (self.captureRealBtn.enabled) {
+        [self showCaptureBtn];
+    }
     [self hideMiddleTipView];
     [self cancelCaptureWithSaveFlag:NO];
 }
