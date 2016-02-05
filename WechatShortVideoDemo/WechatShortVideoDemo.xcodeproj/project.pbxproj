@@ -26,7 +26,6 @@
 		BB0320E91B84315A008AC350 /* SCContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0320B71B84315A008AC350 /* SCContext.m */; };
 		BB0320EA1B84315A008AC350 /* SCFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0320B91B84315A008AC350 /* SCFilter.m */; };
 		BB0320EB1B84315A008AC350 /* SCFilterAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0320BB1B84315A008AC350 /* SCFilterAnimation.m */; };
-		BB0320EC1B84315A008AC350 /* SCFilterSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0320BD1B84315A008AC350 /* SCFilterSelectorView.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		BB0320ED1B84315A008AC350 /* SCImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0320C01B84315A008AC350 /* SCImageView.m */; };
 		BB0320EE1B84315A008AC350 /* SCIOPixelBuffers.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0320C21B84315A008AC350 /* SCIOPixelBuffers.m */; };
 		BB0320EF1B84315A008AC350 /* SCMediaTypeConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0320C41B84315A008AC350 /* SCMediaTypeConfiguration.m */; };
@@ -108,9 +107,6 @@
 		BB0320B91B84315A008AC350 /* SCFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFilter.m; sourceTree = "<group>"; };
 		BB0320BA1B84315A008AC350 /* SCFilterAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFilterAnimation.h; sourceTree = "<group>"; };
 		BB0320BB1B84315A008AC350 /* SCFilterAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFilterAnimation.m; sourceTree = "<group>"; };
-		BB0320BC1B84315A008AC350 /* SCFilterSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFilterSelectorView.h; sourceTree = "<group>"; };
-		BB0320BD1B84315A008AC350 /* SCFilterSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFilterSelectorView.m; sourceTree = "<group>"; };
-		BB0320BE1B84315A008AC350 /* SCFilterSelectorViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFilterSelectorViewInternal.h; sourceTree = "<group>"; };
 		BB0320BF1B84315A008AC350 /* SCImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCImageView.h; sourceTree = "<group>"; };
 		BB0320C01B84315A008AC350 /* SCImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCImageView.m; sourceTree = "<group>"; };
 		BB0320C11B84315A008AC350 /* SCIOPixelBuffers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCIOPixelBuffers.h; sourceTree = "<group>"; };
@@ -302,9 +298,6 @@
 				BB0320B91B84315A008AC350 /* SCFilter.m */,
 				BB0320BA1B84315A008AC350 /* SCFilterAnimation.h */,
 				BB0320BB1B84315A008AC350 /* SCFilterAnimation.m */,
-				BB0320BC1B84315A008AC350 /* SCFilterSelectorView.h */,
-				BB0320BD1B84315A008AC350 /* SCFilterSelectorView.m */,
-				BB0320BE1B84315A008AC350 /* SCFilterSelectorViewInternal.h */,
 				BB0320BF1B84315A008AC350 /* SCImageView.h */,
 				BB0320C01B84315A008AC350 /* SCImageView.m */,
 				BB0320C11B84315A008AC350 /* SCIOPixelBuffers.h */,
@@ -460,7 +453,6 @@
 				BB0320ED1B84315A008AC350 /* SCImageView.m in Sources */,
 				BB0320E71B84315A008AC350 /* SCAudioConfiguration.m in Sources */,
 				BB0320F01B84315A008AC350 /* SCPhotoConfiguration.m in Sources */,
-				BB0320EC1B84315A008AC350 /* SCFilterSelectorView.m in Sources */,
 				BB0320EF1B84315A008AC350 /* SCMediaTypeConfiguration.m in Sources */,
 				BB0320981B842DC7008AC350 /* CALayer+AddUIColor.m in Sources */,
 				BB0320F61B84315A008AC350 /* SCRecorderToolsView.m in Sources */,

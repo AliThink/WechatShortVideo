@@ -11,6 +11,7 @@
 #import "SCFilter.h"
 #import "SCVideoConfiguration.h"
 #import "SCAudioConfiguration.h"
+#import "SCContext.h"
 
 @class SCAssetExportSession;
 @protocol SCAssetExportSessionDelegate <NSObject>
@@ -43,9 +44,9 @@
 @property (strong, nonatomic) NSString *__nullable outputFileType;
 
 /**
- If true, the export session will use the GPU for rendering the filters
+ The context type to use for rendering the images through a filter
  */
-@property (assign, nonatomic) BOOL useGPUForRenderingFilters;
+@property (assign, nonatomic) SCContextType contextType;
 
 /**
  Access the configuration for the video.
@@ -63,15 +64,26 @@
 @property (readonly, nonatomic) NSError *__nullable error;
 
 /**
+ Will be set to YES if cancelExport was called
+ */
+@property (readonly, atomic) BOOL cancelled;
+
+/**
  The timeRange to read from the inputAsset
  */
 @property (assign, nonatomic) CMTimeRange timeRange;
 
 /**
+ Whether the assetExportSession should automatically translate the filter into an AVVideoComposition.
+ This won't be done if a composition has already been set in the videoConfiguration.
+ Default is YES
+ */
+@property (assign, nonatomic) BOOL translatesFilterIntoComposition;
+
+/**
  The current progress
  */
 @property (readonly, nonatomic) float progress;
-
 
 @property (weak, nonatomic) __nullable id<SCAssetExportSessionDelegate> delegate;
 
@@ -79,6 +91,11 @@
 
 // Init with the inputAsset
 - (nonnull instancetype)initWithAsset:(AVAsset *__nonnull)inputAsset;
+
+/**
+ Cancels exportAsynchronouslyWithCompletionHandler
+ */
+- (void)cancelExport;
 
 /**
  Starts the asynchronous execution of the export session
