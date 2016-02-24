@@ -33,6 +33,7 @@
 #import "SCRecordSessionManager.h"
 #import "MBProgressHUD.h"
 
+
 @interface WechatShortVideoController () <SCRecorderDelegate, SCAssetExportSessionDelegate, MBProgressHUDDelegate>
 @property (weak, nonatomic) IBOutlet UIView *scanPreviewView;
 @property (weak, nonatomic) IBOutlet UIView *operatorView;
@@ -56,6 +57,9 @@
     
     //Preview
     SCPlayer *_player;
+    
+    //Video filepath
+    NSURL *VIDEO_OUTPUTFILE;
 }
 
 @synthesize delegate;
@@ -74,6 +78,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    VIDEO_OUTPUTFILE = [NSURL fileURLWithPath:[PATH_OF_DOCUMENT stringByAppendingPathComponent:VIDEO_DEFAULTNAME]];
+    
     captureValidFlag = NO;
     
     [self configRecorder];
@@ -249,6 +255,10 @@
 
 #pragma mark - Record finish Preview and save
 - (void)configPreviewMode {
+    if ([self.scanPreviewView viewWithTag:400]) {
+        return;
+    }
+    
     [self hideCaptureBtn];
     self.captureRealBtn.enabled = NO;
     

@@ -37,15 +37,14 @@
 #define WechatShortVideo_WechatShortVideoConfig_h
 
 #import "CALayer+AddUIColor.h"
+#import <UIKit/UIKit.h>
 
 //Video file time length limitation (Maximum Seconds)
 #define VIDEO_MAX_TIME       8.0
 //Video file time length limitation (Minimum Seconds)
 #define VIDEO_VALID_MINTIME  0.8
 //Video filename
-#define VIDEO_DEFAULTNAME    @"videoReadyToUpload.mov"
-//Video filepath
-#define VIDEO_OUTPUTFILE     [NSURL fileURLWithPath:[PATH_OF_DOCUMENT stringByAppendingPathComponent:VIDEO_DEFAULTNAME]]
+static NSString *VIDEO_DEFAULTNAME = @"videoReadyToUpload.mov";
 
 //Tip Strings pressed on the record area
 #define OPERATE_RECORD_TIP  @"↑上移取消"
